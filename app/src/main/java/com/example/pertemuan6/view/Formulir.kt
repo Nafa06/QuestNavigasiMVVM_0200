@@ -88,7 +88,9 @@ fun FormIsian(
                 modifier = Modifier.fillMaxWidth(1f)
                     .padding(all = 25.dp),
                 onClick = OnSubmitBtnClick
-            ) { }
+            ) {
+                Text(stringResource(R.string.submit))
+            }
         }
     }
 }
