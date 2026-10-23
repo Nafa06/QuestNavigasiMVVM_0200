@@ -3,8 +3,10 @@ package com.example.pertemuan6.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -48,13 +50,21 @@ fun TampilData(
             {
                 items.forEach { item ->
                     Column {
-                        Text(text = item.first.uppercase(), fontsize = 16.sp)
-                        Text(text = item.second, fontWeight = FontWeight.Bold,
-                            fontFamily = FontFamily.Cursive, fontSize = 22.sp)
+                        Text(text = item.first.uppercase(), fontSize = 16.sp)
+                        Text(
+                            text = item.second, fontWeight = FontWeight.Bold,
+                            fontFamily = FontFamily.Cursive, fontSize = 22.sp
+                        )
                     }
                     HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
                 }
                 Spacer(modifier = Modifier.height(10.dp))
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = onBackBtnClick
+                ) {
+                    Text(text = stringResource(R.string.back))
+                }
             }
         }
     }
