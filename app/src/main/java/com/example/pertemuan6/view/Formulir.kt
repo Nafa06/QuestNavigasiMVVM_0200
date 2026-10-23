@@ -60,6 +60,7 @@ fun FormIsian(
                             selected = false,
                             onClick = {item},
                         )
+                        Text(text = item)
                     }
                 }
             }
